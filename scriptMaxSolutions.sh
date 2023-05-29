@@ -12,9 +12,9 @@ java -version
 if [ $? -eq 0 ]	
 	then
 		echo "$(tput setaf 10)[Maxs assistant]:$(tput setaf 7) : Você já possui o java instalado!!!"
-		if [ $VERSAO -eq 11 ]
+		if [ $VERSAO -ne 17 ]
 				then
-					echo "$(tput setaf 10)[MaxS assistant]:$(tput setaf 7) Preparando para instalar a versão 11 do Java. Confirme a instalação quando solicitado ;D"
+					echo "$(tput setaf 10)[MaxS assistant]:$(tput setaf 7) Preparando a atualização para a versão 17 do Java."
 					sudo apt install default-jre ; apt install openjdk-17-jre-headless; -y
 					clear
 					echo "$(tput setaf 10)[MaxS assistant]:$(tput setaf 7) Java instalado com sucesso!"
@@ -31,10 +31,10 @@ if [ $? -eq 0 ]
 							java -jar looca-api-java-1.0-SNAPSHOT-jar-with-dependencies.jar
 					fi
 				fi
-	else
-		echo "$(tput setaf 10)[MaxS assistant]:$(tput setaf 7)  Opa! Não identifiquei nenhuma versão do Java instalado, mas sem problemas, irei resolver isso agora!"
-		echo "$(tput setaf 10)[Maxs assistant]:$(tput setaf 7)  Confirme para mim se realmente deseja instalar o Java (S/N)?"
-	read inst
+		else
+			echo "$(tput setaf 10)[MaxS assistant]:$(tput setaf 7)  Opa! Não identifiquei nenhuma versão do Java instalado, mas sem problemas, irei resolver isso agora!"
+			echo "$(tput setaf 10)[Maxs assistant]:$(tput setaf 7)  Confirme para mim se realmente deseja instalar o Java na versão 17 (S/N)?"
+			read inst
 	if [ \"$inst\" == \"S\" ]
 		then
 			echo "$(tput setaf 10)[MaxS assistant]:$(tput setaf 7)  Ok! Você escolheu instalar o Java ;D"
@@ -47,9 +47,9 @@ if [ $? -eq 0 ]
 			sudo apt update && sudo apt upgrade -y
 			clear
 			
-			if [ $VERSAO -eq 11 ]
+			if [ $VERSAO -ne 17 ]
 				then
-					echo "$(tput setaf 10)[MaxS assistant]:$(tput setaf 7) Preparando para instalar a versão 11 do Java. Confirme a instalação quando solicitado ;D"
+					echo "$(tput setaf 10)[MaxS assistant]:$(tput setaf 7) Preparando para instalar a versão 17 do Java."
 					sudo apt install default-jre ; apt install openjdk-17-jre-headless; -y
 					clear
 					echo "$(tput setaf 10)[MaxS assistant]:$(tput setaf 7) Java instalado com sucesso!"
@@ -65,8 +65,8 @@ if [ $? -eq 0 ]
 							cd target/
 							java -jar looca-api-java-1.0-SNAPSHOT-jar-with-dependencies.jar
 					fi
-				fi
-		else	
+			fi
+	else	
 		echo "$(tput setaf 10)[MaxS assistant]:$(tput setaf 7)  Você optou por não instalar o Java por enquanto, até a próxima então!"
 	fi
 fi
