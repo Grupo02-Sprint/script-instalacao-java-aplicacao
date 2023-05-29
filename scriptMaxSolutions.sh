@@ -63,7 +63,7 @@ if [ $? -eq 0 ]
 							cd looca-api-maxsolutions/
 							cd tentativa-looca-api/
 							cd target/
-							java -jar looca-api-java-1.0-SNAPSHOT-jar-with-dependencies.jar
+							java -jar tentativa-looca-api-1.0-SNAPSHOT-jar-with-dependencies.jar
 					fi
 			fi
 	else	
