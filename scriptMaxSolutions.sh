@@ -22,7 +22,7 @@ if [ $? -eq 0 ]
 					echo "$(tput setaf 10)[MaxS assistant]:$(tput setaf 7) Com o Java instalado, já podemos instalar nossa aplicação na sua máquina."
 					echo "$(tput setaf 10)[MaxS assistent]:$(tput setaf 7) Você gostaria de instalar nossa aplicação (S/N)?"
 					read inst
-					if [ \"$inst\" == \"S\" ]
+					if [ \"$inst\" == \"s\" ]
 						then
 							git clone https://github.com/Grupo02-Sprint/looca-api-max-solutions.git
 							cd looca-api-maxsolutions/
