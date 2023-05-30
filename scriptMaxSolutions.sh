@@ -15,8 +15,7 @@ if [ $? -eq 0 ]
 		if [ $VERSAO -ne 17 ]
 				then
 					echo "$(tput setaf 10)[MaxS assistant]:$(tput setaf 7) Preparando a atualização para a versão 17 do Java."
-					sudo apt install default-jre ; apt install openjdk-17-jre-headless; -y
-					clear
+					sudo apt install default-jdk -y; sudo apt install openjdk-17-jre -y;
 					echo "$(tput setaf 10)[MaxS assistant]:$(tput setaf 7) Java instalado com sucesso!"
 
 					echo "$(tput setaf 10)[MaxS assistant]:$(tput setaf 7) Com o Java instalado, já podemos instalar nossa aplicação na sua máquina."
@@ -25,9 +24,13 @@ if [ $? -eq 0 ]
 					if [ \"$inst\" == \"s\" ]
 						then
 							git clone https://github.com/Grupo02-Sprint/looca-api-max-solutions.git
-							cd /looca-api-maxsolutions/
-							cd /tentativa-looca-api/
-							cd /target/
+							sleep 5
+							cd looca-api-max-solutions/
+							sleep 0.5
+							cd tentativa-looca-api/
+							sleep 0.5
+							cd target/
+							sleep 0.5
 							java -jar tentativa-looca-api-1.0-SNAPSHOT-jar-with-dependencies.jar
 					fi
 				fi
@@ -50,19 +53,23 @@ if [ $? -eq 0 ]
 			if [ $VERSAO -ne 17 ]
 				then
 					echo "$(tput setaf 10)[MaxS assistant]:$(tput setaf 7) Preparando para instalar a versão 17 do Java."
-					sudo apt install default-jre ; apt install openjdk-17-jre-headless; -y
+					sudo apt install default-jdk -y;sudo apt install openjdk-17-jre -y;
 					clear
 					echo "$(tput setaf 10)[MaxS assistant]:$(tput setaf 7) Java instalado com sucesso!"
 
 					echo "$(tput setaf 10)[MaxS assistant]:$(tput setaf 7) Com o Java instalado, já podemos instalar nossa aplicação na sua máquina."
 					echo "$(tput setaf 10)[MaxS assistent]:$(tput setaf 7) Você gostaria de instalar nossa aplicação (S/N)?"
 					read inst
-					if [ \"$inst\" == \"S\" ]
+					if [ \"$inst\" == \"s\" ]
 						then
 							git clone https://github.com/Grupo02-Sprint/looca-api-max-solutions.git
-							cd /looca-api-maxsolutions/
-							cd /tentativa-looca-api/
-							cd /target/
+							sleep 5
+							cd looca-api-max-solutions/
+							sleep 0.5
+							cd tentativa-looca-api/
+							sleep 0.5
+							cd target/
+							sleep 0.5
 							java -jar tentativa-looca-api-1.0-SNAPSHOT-jar-with-dependencies.jar
 					fi
 			fi
