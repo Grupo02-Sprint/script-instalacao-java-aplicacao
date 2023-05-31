@@ -31,8 +31,8 @@ if [ $? -eq 0 ]
 							sudo docker pull mysql:5.7
 							sudo docker run -d -p 3306:3306 --name ContainerBD -e "MYSQL_DATABASE=maxsolutions" -e "MYSQL_ROOT_PASSWORD=urubu100" mysql:5.7
 							sudo docker exec -it ContainerBD bash
-							exit
-							exit 
+							
+			
 
 							git clone https://github.com/Grupo02-Sprint/looca-api-max-solutions.git
 							sleep 5
@@ -81,8 +81,7 @@ if [ $? -eq 0 ]
 							sudo docker pull mysql:5.7
 							sudo docker run -d -p 3306:3306 --name ContainerBD -e "MYSQL_DATABASE=maxsolutions" -e "MYSQL_ROOT_PASSWORD=urubu100" mysql:5.7
 							sudo docker exec -it ContainerBD bash
-							exit 
-							exit
+							
 							
 							git clone https://github.com/Grupo02-Sprint/looca-api-max-solutions.git
 							sleep 5
