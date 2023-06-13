@@ -15,7 +15,7 @@ if [ $? -eq 0 ]
 		if [ $VERSAO -ne 17 ]
 				then
 					echo "$(tput setaf 10)[MaxS assistant]:$(tput setaf 7) Preparando a atualização para a versão 17 do Java."
-					sudo apt install default-jdk -y; sudo apt install openjdk-17-jre -y;
+					sudo apt install default-jdk -y; sudo apt-get install openjdk-17-jdk -y;
 					echo "$(tput setaf 10)[MaxS assistant]:$(tput setaf 7) Java instalado com sucesso!"
 
 					echo "$(tput setaf 10)[MaxS assistant]:$(tput setaf 7) Com o Java instalado, já podemos instalar nossa aplicação na sua máquina."
